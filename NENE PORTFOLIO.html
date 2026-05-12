@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,">
+    <title>NENE FOUNE | Cyber Security & MERN Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="Stylesheet" href="Portfolio.css">
+</head>
+<body>
+<div class="container">
+    <div class="hero">
+        <div class="badge"> 🛡️Cyber Security · ⚛️ MERN Full Stack</div>
+        <h1>NENE FOUNE</h1>
+        <div class="subhead">BSC Cyber Security (Inde) | Développeur MERN Full Stack</div>
+        <div class="btn-group">
+            <button class="btn btn-primary" id="contactScrollBtn"><i class="fas fa-paper-plane"></i> Me contacter</button>
+            <button class="btn btn-outline" id="projectsScrollBtn"><i class="fas fa-code"></i> Voir projets</button>
+        </div>
+    </div>
+
+    
+    <section>
+        <div class="section-title">À propos de moi</div>
+        
+        <img src="LINKEDIN PICTURE.png" alt="PHOTO LINKEDIN" style="width:150px; height:200px">
+        
+        <div class="about-card">
+            <p><i class="fas fa-shield-alt"></i> Étudiant en BSC Cyber Security en Inde, passionné par la protection des systèmes et le développement web.</p>
+            <p style="margin-top: 1rem;"><i class="fab fa-react"></i> Je suis également développeur MERN Full Stack : MongoDB, Express, React, Node.js. Je construis des applications modernes, sécurisées et performantes.</p>
+            <p style="margin-top: 1rem;"><i class="fas fa-rocket"></i> Mon objectif ? Allier cybersécurité et développement full stack pour créer des applications robustes et résistantes aux menaces. Toujours en apprentissage continu, je participe à des CTF, développe des projets concrets et approfondis mes connaissances en sécurité offensive et défensive.</p>
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="section-title"> Certifications & Formations</div>
+        <div class="certs-grid">
+            <div class="cert-item"><i class="fab fa-react"></i> MERN Stack - Ainwik Infotech</div>
+            <div class="cert-item"><i class="fas fa-shield-alt"></i> Certified Ethical Hacker (CEH) - en cours</div>
+            <div class="cert-item"><i class="fab fa-node"></i> Node.js Security - OWASP</div>
+            <div class="cert-item"><i class="fas fa-database"></i> MongoDB Developer</div>
+            <div class="cert-item"><i class="fas fa-lock"></i> Cybersecurity Fundamentals - CISCO</div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="section-title"> Tech Stack</div>
+        <div class="tech-grid">
+            <div class="tech-card"><div class="tech-icon"><i class="fab fa-react"></i></div><div class="tech-name">React</div></div>
+            <div class="tech-card"><div class="tech-icon"><i class="fab fa-node-js"></i></div><div class="tech-name">Node.js</div></div>
+            <div class="tech-card"><div class="tech-icon"><i class="fas fa-database"></i></div><div class="tech-name">MongoDB</div></div>
+            <div class="tech-card"><div class="tech-icon"><i class="fab fa-js"></i></div><div class="tech-name">Express.js</div></div>
+            <div class="tech-card"><div class="tech-icon"><i class="fab fa-js"></i></div><div class="tech-name">JavaScript</div></div>
+            <div class="tech-card"><div class="tech-icon"><i class="fab fa-python"></i></div><div class="tech-name">Python</div></div>
+            <div class="tech-card"><div class="tech-icon"><i class="fab fa-git-alt"></i></div><div class="tech-name">Git</div></div>
+            <div class="tech-card"><div class="tech-icon"><i class="fab fa-github"></i></div><div class="tech-name">GitHub</div></div>
+            <div class="tech-card"><div class="tech-icon"><i class="fas fa-shield-alt"></i></div><div class="tech-name">OWASP</div></div>
+            <div class="tech-card"><div class="tech-icon"><i class="fas fa-lock"></i></div><div class="tech-name">JWT Auth</div></div>
+            <div class="tech-card"><div class="tech-icon"><i class="fas fa-cloud"></i></div><div class="tech-name">Docker</div></div>
+            <div class="tech-card"><div class="tech-icon"><i class="fab fa-tailwind"></i></i></div><div class="tech-name">Tailwind CSS</div></div>
+        </div>
+    </section>
+
+
+    <section id="projects-section">
+        <div class="section-title">Projets Full Stack</div>
+        <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+
+    
+    <section id="contact-section">
+        <div class="section-title"> Contact</div>
+        <div class="contact-links">
+            <a href="#" class="contact-link" id="mailLink"><i class="far fa-envelope"></i> nenefoune66@gmail.com</a>
+            <a href="#" class="contact-link" id="githubLink"><i class="fab fa-github"></i> https://github.com/nenefoune848-svg</a>
+            <a href="#" class="contact-link" id="linkedinLink"><i class="fab fa-linkedin-in"></i> www.linkedin.com/in/foune-nene-39b9583b4</a>
+        </div>
+        <footer>
+            <p>© 2025 NENE FOUNE — BSC Cyber Security & MERN Stack Developer | Sécurité + Créativité</p>
+        </footer>
+    </section>
+</div>
+
+
+<div id="projectModal" class="modal">
+    <div class="modal-card">
+        <i class="fas fa-code" style="font-size: 2.5rem; color: #00d4ff;"></i>
+        <h3 id="modalTitle">Nom projet</h3>
+        <p id="modalDesc">Description détaillée du projet.</p>
+        <button class="close-modal" id="closeModalBtn">Fermer</button>
+    </div>
+</div>
+
+<script>
+    
+    const projectsData = [
+        {
+            title: "CyberDash - Dashboard Sécurité",
+            shortDesc: "Monitoring des vulnérabilités & logs en temps réel",
+            fullDesc: "Application MERN complète : MongoDB pour stocker les logs, Express/Node.js pour l'API REST, React pour le dashboard avec graphiques. Implémentation de JWT + rôles admin/user. Scan de ports intégré et alertes email.",
+            techs: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
+            icon: "fa-chart-line"
+        },
+        {
+            title: "SecureAuth - Auth Module",
+            shortDesc: "Système d'authentification sécurisé (2FA, Brute Force protection)",
+            fullDesc: "Backend Node.js/Express avec MongoDB. Fonctionnalités : inscription/login, JWT refresh tokens, 2FA (TOTP), rate limiting, détection de multiples tentatives, logs de connexion. Prêt à intégrer dans tout projet MERN.",
+            techs: ["Node.js", "Express", "MongoDB", "speakeasy", "Nodemailer"],
+            icon: "fa-lock"
+        },
+        {
+            title: "FileCrypt - Partage sécurisé",
+            shortDesc: "Plateforme de partage de fichiers avec chiffrement AES-256",
+            fullDesc: "Stack MERN + crypto-js. Les fichiers sont chiffrés côté client avant envoi, déchiffrés uniquement par le destinataire avec un mot de passe partagé. Gestion des permissions et expiration des liens.",
+            techs: ["React", "Node.js", "MongoDB", "crypto-js", "Multer"],
+            icon: "fa-file-shield"
+        },
+        {
+            title: "CTF Platform",
+            shortDesc: "Plateforme d'entraînement Capture The Flag",
+            fullDesc: "Application complète pour héberger des challenges CTF. Dashboard admin pour créer des épreuves (web, crypto, stégano). Classement en temps réel, validation des flags via API. Stack MERN + Docker pour l'isolation.",
+            techs: ["MERN", "Docker", "JWT", "Tailwind CSS"],
+            icon: "fa-flag-checkered"
+        }
+    ];
+
+    const projectsGrid = document.getElementById('projectsGrid');
+    const modal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+    function openModal(project) {
+        modalTitle.innerText = project.title;
+        modalDesc.innerText = project.fullDesc;
+        modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    projectsData.forEach(proj => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+        card.addEventListener('click', () => openModal(proj));
+        
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'project-img';
+        imgDiv.innerHTML = `<i class="fas ${proj.icon}" style="font-size: 3rem;"></i>`;
+        
+        const infoDiv = document.createElement('div');
+        infoDiv.className = 'project-info';
+        
+        const titleEl = document.createElement('h3');
+        titleEl.innerText = proj.title;
+        const descEl = document.createElement('p');
+        descEl.innerText = proj.shortDesc;
+        
+        const techsContainer = document.createElement('div');
+        proj.techs.forEach(tech => {
+            const span = document.createElement('span');
+            span.className = 'tech-tag';
+            span.innerText = tech;
+            techsContainer.appendChild(span);
+        });
+        
+        infoDiv.appendChild(titleEl);
+        infoDiv.appendChild(descEl);
+        infoDiv.appendChild(techsContainer);
+        card.appendChild(imgDiv);
+        card.appendChild(infoDiv);
+        projectsGrid.appendChild(card);
+    });
+    
+    closeModalBtn.addEventListener('click', closeModal);
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+    
+    
+    const contactScrollBtn = document.getElementById('contactScrollBtn');
+    const projectsScrollBtn = document.getElementById('projectsScrollBtn');
+    const contactSection = document.getElementById('contact-section');
+    const projectsSection = document.getElementById('projects-section');
+    
+    contactScrollBtn.addEventListener('click', () => {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    projectsScrollBtn.addEventListener('click', () => {
+        projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    
+    
+    const mailLink = document.getElementById('mailLink');
+    const githubLink = document.getElementById('githubLink');
+    const linkedinLink = document.getElementById('linkedinLink');
+    
+    mailLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert(" Ajoutez votre email ici : modifiez le code ou plus tard dans la section contact.");
+    });
+    githubLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert(" Remplacez 'votre-pseudo' par votre vrai pseudo GitHub dans la section contact.");
+    });
+    linkedinLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert(" Ajoutez votre URL LinkedIn personnalisée dans le code HTML.");
+    });
+</script>
+</body>
+</html>
